@@ -1,0 +1,6 @@
+@Oiretros_HostAddress = http://localhost:5223
+
+GET {{Oiretros_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
