@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oiretros", "Oiretros\Oiretros.csproj", "{4987C2F2-0F0E-48C8-BC7D-DB47F1550E6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "Oiretros\API.csproj", "{4987C2F2-0F0E-48C8-BC7D-DB47F1550E6C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - View", "1 - View", "{F727A453-E667-4888-BCB5-AA7DA0DEEE9C}"
 EndProject
@@ -12,6 +12,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infra", "3 - Infra", "{4D72F793-FC7E-4660-87DD-C375B71B3261}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Test", "4 - Test", "{5FD43E5B-EDCC-4D0D-A6BA-5949B9F35AC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeFile", "OfficeFile\OfficeFile.csproj", "{69C68DF0-E969-43E5-8B39-10C61B193854}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{DBAD30A5-2DA0-4CAE-A575-33844FD1F849}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +27,22 @@ Global
 		{4987C2F2-0F0E-48C8-BC7D-DB47F1550E6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4987C2F2-0F0E-48C8-BC7D-DB47F1550E6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4987C2F2-0F0E-48C8-BC7D-DB47F1550E6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69C68DF0-E969-43E5-8B39-10C61B193854}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69C68DF0-E969-43E5-8B39-10C61B193854}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69C68DF0-E969-43E5-8B39-10C61B193854}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69C68DF0-E969-43E5-8B39-10C61B193854}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBAD30A5-2DA0-4CAE-A575-33844FD1F849}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBAD30A5-2DA0-4CAE-A575-33844FD1F849}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBAD30A5-2DA0-4CAE-A575-33844FD1F849}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBAD30A5-2DA0-4CAE-A575-33844FD1F849}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4987C2F2-0F0E-48C8-BC7D-DB47F1550E6C} = {F727A453-E667-4888-BCB5-AA7DA0DEEE9C}
+		{69C68DF0-E969-43E5-8B39-10C61B193854} = {4D72F793-FC7E-4660-87DD-C375B71B3261}
+		{DBAD30A5-2DA0-4CAE-A575-33844FD1F849} = {70C6AAE7-C8FB-4F6F-B71C-46305D6D5361}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E95A4529-8D1D-4503-9836-605BC9D33109}
