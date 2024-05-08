@@ -9,6 +9,10 @@ namespace Business.Services
 {
     public class LotofacilService : ILotofacilService
     {
-
+        private readonly ILotofacilService _lotofacilService;
+        public LotofacilService()
+        {
+            
+        }
     }
 }
