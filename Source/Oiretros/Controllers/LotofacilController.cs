@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Oiretros.Controllers;
 using Oiretros;
+using Business.Interfaces.Services;
 
 namespace API.Controllers
 {
@@ -10,10 +11,12 @@ namespace API.Controllers
     {
 
         private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILotofacilService _lotofacilService;
 
-        public LotofacilController(ILogger<WeatherForecastController> logger)
+        public LotofacilController(ILogger<WeatherForecastController> logger, ILotofacilService lotofacilService)
         {
             _logger = logger;
+            _lotofacilService = lotofacilService;
         }
 
         [HttpGet(Name = "GetGames")]
