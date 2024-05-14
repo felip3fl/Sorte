@@ -1,5 +1,7 @@
+using Business.Interfaces.Infra;
 using Business.Interfaces.Services;
 using Business.Services;
+using OfficeFile;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<ILotofacilService, LotofacilService>();
+builder.Services.AddScoped<IExcelFile, ExcelFile>();
 
 var app = builder.Build();
 

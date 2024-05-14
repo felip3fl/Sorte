@@ -8,5 +8,6 @@ namespace Business.Services
 {
     public abstract class ServiceBase
     {
+
     }
 }

@@ -1,8 +1,9 @@
-﻿using ExcelDataReader;
+﻿using Business.Interfaces.Infra;
+using ExcelDataReader;
 
 namespace OfficeFile
 {
-    public class ExcelFile
+    public class ExcelFile : IExcelFile
     {
         public List<List<object>> Open(string filePath)
         {
@@ -37,5 +38,6 @@ namespace OfficeFile
             }
             return excelData;
         }
+
     }
 }
