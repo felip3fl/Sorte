@@ -8,6 +8,6 @@ namespace Business.Interfaces.Services
 {
     public interface ILotofacilService
     {
-
+        List<List<object>> Open(string filePath);
     }
 }
