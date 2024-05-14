@@ -3,6 +3,9 @@ using Business.Interfaces.Services;
 using Business.Services;
 using OfficeFile;
 
+//Necessary to use with ExcelDataReader
+System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
