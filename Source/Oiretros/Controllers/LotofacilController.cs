@@ -2,6 +2,7 @@
 using Oiretros.Controllers;
 using Oiretros;
 using Business.Interfaces.Services;
+using System.Text;
 
 namespace API.Controllers
 {
@@ -23,8 +24,23 @@ namespace API.Controllers
         public ActionResult Get()
         {
             var result = _lotofacilService.Open("");
+            StringBuilder result2 = new StringBuilder();
 
-            return Ok(result);
+            foreach (var item in result)
+            {
+                for (var i = 2; i < 16; i++)
+                {
+                    var stringFormatada = item[i];
+                    result2.Append(string.Format("{0:00}", stringFormatada) + " - ");
+                }
+                result2.Append("\n");
+
+
+            }
+                
+
+
+            return Ok(result2.ToString());
         }
     }
 }
