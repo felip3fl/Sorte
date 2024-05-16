@@ -20,7 +20,7 @@ namespace API.Controllers
             _lotofacilService = lotofacilService;
         }
 
-        [HttpGet(Name = "GetGames")]
+        [HttpGet]
         public ActionResult Get()
         {
             var result = _lotofacilService.Open("");
@@ -31,14 +31,13 @@ namespace API.Controllers
                 for (var i = 2; i < 16; i++)
                 {
                     var stringFormatada = item[i];
-                    result2.Append(string.Format("{0:00}", stringFormatada) + " - ");
+                    result2.Append(string.Format(" - " + "{0:00}", stringFormatada));
                 }
                 result2.Append("\n");
 
 
             }
                 
-
 
             return Ok(result2.ToString());
         }
