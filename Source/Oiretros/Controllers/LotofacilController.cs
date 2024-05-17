@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Oiretros.Controllers;
 using Oiretros;
 using Business.Interfaces.Services;
 using System.Text;
@@ -11,12 +10,10 @@ namespace API.Controllers
     public class LotofacilController : Controller
     {
 
-        private readonly ILogger<WeatherForecastController> _logger;
         private readonly ILotofacilService _lotofacilService;
 
-        public LotofacilController(ILogger<WeatherForecastController> logger, ILotofacilService lotofacilService)
+        public LotofacilController(ILotofacilService lotofacilService)
         {
-            _logger = logger;
             _lotofacilService = lotofacilService;
         }
 
