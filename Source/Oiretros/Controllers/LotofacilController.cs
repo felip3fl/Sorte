@@ -22,10 +22,12 @@ namespace API.Controllers
         public ActionResult Get()
         {
             var result = _lotofacilService.Open("");
-            var jogoLotofacil = ConvertListTojogoLotofacil(result);
+            var jogos = ConvertListTojogoLotofacil(result);
 
-            return Ok(jogoLotofacil);
+            return Ok(jogos.JogosLotofacil);
         }
+
+
 
         private Jogos ConvertListTojogoLotofacil(List<List<object>> result)
         {
@@ -36,6 +38,7 @@ namespace API.Controllers
             foreach (var item in result)
             {
                 JogoLotofacil jogoLotofacil = new JogoLotofacil();
+                jogoLotofacil.Concurso = Convert.ToInt32( item[0]);
 
                 for (var i = 2; i < 17; i++)
                 {
