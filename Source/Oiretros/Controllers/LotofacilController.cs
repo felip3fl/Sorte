@@ -27,6 +27,16 @@ namespace API.Controllers
             return Ok(jogos.JogosLotofacil);
         }
 
+        [HttpGet("GetByNumber")]
+        public ActionResult GetAll()
+        {
+            var result = _lotofacilService.Open("");
+            var jogos = ConvertListTojogoLotofacil(result);
+
+
+            return Ok(jogos.JogosLotofacil);
+        }
+
 
 
         private Jogos ConvertListTojogoLotofacil(List<List<object>> result)
