@@ -28,13 +28,13 @@ namespace API.Controllers
         }
 
         [HttpGet("GetByNumber")]
-        public ActionResult GetAll()
+        public ActionResult GetAll(byte number)
         {
             var result = _lotofacilService.Open("");
             var jogos = ConvertListTojogoLotofacil(result);
 
 
-            return Ok(jogos.JogosLotofacil);
+            return Ok(jogos.JogosLotofacil.Where(x => x.Numeros.Contains(number)));
         }
 
 
