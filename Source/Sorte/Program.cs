@@ -15,7 +15,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSingleton<ILotofacilService, LotofacilService>();
+//builder.Services.AddSingleton<ILotofacilService, LotofacilService>();
 builder.Services.AddScoped<IExcelFile, ExcelFile>();
 
 var app = builder.Build();

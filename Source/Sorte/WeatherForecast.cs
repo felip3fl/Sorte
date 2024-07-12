@@ -1,4 +1,4 @@
-namespace Oiretros
+namespace Sorte
 {
     public class WeatherForecast
     {

@@ -11,16 +11,21 @@ namespace Business.Services
     public class LotofacilService : ILotofacilService
     {
         private readonly IExcelFile _excelFile;
+        private List<List<object>> lists = new List<List<object>>();
 
         public LotofacilService(IExcelFile excelFile)
         {
             _excelFile = excelFile;
         }
 
-        public List<List<object>> Open(string filePath)
+        public List<List<object>> GetList()
         {
-            var result = _excelFile.Open("C:\\Users\\felip\\Source\\FL_OIRETROS\\Material\\Lotofácil24032024.xlsx");
-            return result;
+            return lists;
+        }
+
+        public void Load(string filePath)
+        {
+            lists = _excelFile.Open("C:\\Users\\felip\\Source\\FL_OIRETROS\\Material\\Lotofácil24032024.xlsx");
         }
     }
 }

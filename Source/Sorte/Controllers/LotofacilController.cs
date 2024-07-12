@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Oiretros;
+using Sorte;
 using Business.Interfaces.Services;
 using System.Text;
 using Business.Models;
@@ -16,13 +16,13 @@ namespace API.Controllers
         public LotofacilController(ILotofacilService lotofacilService)
         {
             _lotofacilService = lotofacilService;
+            _lotofacilService.Load("");
         }
 
         [HttpGet]
         public ActionResult Get()
         {
-            var result = _lotofacilService.Open("");
-            var jogos = ConvertListTojogoLotofacil(result);
+            var jogos = ConvertListTojogoLotofacil(_lotofacilService.GetList());
 
             return Ok(jogos.JogosLotofacil);
         }
@@ -30,8 +30,7 @@ namespace API.Controllers
         [HttpGet("GetByNumber")]
         public ActionResult GetAll(byte number)
         {
-            var result = _lotofacilService.Open("");
-            var jogos = ConvertListTojogoLotofacil(result);
+            var jogos = ConvertListTojogoLotofacil(_lotofacilService.GetList());
 
 
             return Ok(jogos.JogosLotofacil.Where(x => x.Numeros.Contains(number)));
